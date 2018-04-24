@@ -1,5 +1,6 @@
 package com.company;
 
+import com.google.gson.Gson;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,20 +8,35 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main extends Application{
  // https://imgur.com/a/QEhEX6b 4th grade
     // https://github.com/javaterminal/TerminalFX
     public static void main(String[] args) {
-        boolean continueGame = true;
+        launch(args);
+        /*boolean continueGame = true;
         System.out.println("Welcome to the Anglo Tech Day!");
         Scanner scan = new Scanner(System.in);
-        while(continueGame){
-            System.out.println("Please enter the characters in order without any spaces or quotes. (e.g.: 87g4fw");
-            String input = scan.nextLine();
+        Gson gson = new Gson();
+        ArrayList<Node> list = new ArrayList<Node>();
+        list.add(new Node("hello", '4'));
+        list.add(new Node("bye", 'g'));
+        list.add(new Node("hello","goodbye", 'j'));
+        list.add(new Node("hello", "iohuegr", '2'));
+        list.add(new Node("hello", 'a'));
 
-        }
+        //System.out.println(gson.toJson(list));
+        while(continueGame){
+            System.out.println("Please enter the characters in order without any spaces or quotes. (e.g.: 87g4fw). Alternatively, type \"quit\" without quotes to exit the application. ");
+            String input = scan.nextLine();
+            if(input.equalsIgnoreCase("quit")){
+                System.exit(0);
+                break;
+            }
+            launch();
+        }*/
     }
 
     @Override
@@ -29,7 +45,7 @@ public class Main extends Application{
         Parent root = FXMLLoader.load(getClass().getResource("output.fxml"));
 
         Scene scene = new Scene(root);
-        scene.getStylesheets().add(com.company.TerminalAppStarter.class.getResource("/styles/Styles.css").toExternalForm());
+        //scene.getStylesheets().add(com.company.TerminalAppStarter.class.getResource("/styles/Styles.css").toExternalForm());
 
         stage.setTitle("TerminalFX");
         stage.setScene(scene);
