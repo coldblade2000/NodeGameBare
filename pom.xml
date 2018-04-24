@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.company</groupId>
+    <groupId>main.java.com.company</groupId>
     <artifactId>NodeGameBare</artifactId>
     <version>0.1</version>
     <packaging>jar</packaging>
@@ -12,7 +12,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <mainClass>com.company.Main</mainClass>
+        <mainClass>main.java.com.company.Main</mainClass>
     </properties>
 
     <organization>
