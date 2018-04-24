@@ -1,4 +1,4 @@
-package com.kodedu.terminalfx;
+package com.company;
 
 import com.company.TerminalBuilder;
 import com.company.TerminalTab;
