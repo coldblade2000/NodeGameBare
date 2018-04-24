@@ -1,8 +1,12 @@
 package com.company;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.InputStream;
 import java.util.Scanner;
 
 public class Main extends Application{
@@ -20,7 +24,15 @@ public class Main extends Application{
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage stage) throws Exception {
+        /*InputStream sceneStream = com.kodedu.terminalfx.TerminalAppStarter.class.getResourceAsStream("/fxml/Terminal_Scene.fxml");*/
+        Parent root = FXMLLoader.load(getClass().getResource("output.fxml"));
 
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add(com.company.TerminalAppStarter.class.getResource("/styles/Styles.css").toExternalForm());
+
+        stage.setTitle("TerminalFX");
+        stage.setScene(scene);
+        stage.show();
     }
 }
