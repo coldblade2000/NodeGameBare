@@ -1,0 +1,13 @@
+[
+  {
+    "beginning": "public class Output{\n    public static void main(String[] args){\n",
+    "end": "    }\n}",
+    "identifier": "a",
+    "isExpression": false
+  },
+  {
+    "beginning": "        System.out.println(\"HelloWorld\");\n",
+    "identifier": "1",
+    "isExpression": true
+  }
+]

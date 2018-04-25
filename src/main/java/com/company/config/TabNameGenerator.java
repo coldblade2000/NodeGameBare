@@ -1,4 +1,4 @@
-package main.java.com.company.config;
+package com.company.config;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

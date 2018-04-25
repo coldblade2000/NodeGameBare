@@ -1,4 +1,4 @@
-package main.java.com.company.helper;
+package com.company.helper;
 
 import java.io.*;
 import java.nio.file.*;

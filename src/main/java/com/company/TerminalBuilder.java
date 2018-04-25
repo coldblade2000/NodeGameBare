@@ -1,8 +1,8 @@
-package main.java.com.company;
+package com.company;
 
-import main.java.com.company.config.DefaultTabNameGenerator;
-import main.java.com.company.config.TerminalConfig;
-import main.java.com.company.config.TabNameGenerator;
+import com.company.config.DefaultTabNameGenerator;
+import com.company.config.TerminalConfig;
+import com.company.config.TabNameGenerator;
 
 import java.nio.file.Path;
 import java.util.Objects;

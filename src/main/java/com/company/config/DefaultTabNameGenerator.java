@@ -1,6 +1,6 @@
-package main.java.com.company.config;
+package com.company.config;
 
-import main.java.com.company.config.TabNameGenerator;
+import com.company.config.TabNameGenerator;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

@@ -1,8 +1,8 @@
-package main.java.com.company;
+package com.company;
 
-import main.java.com.company.TerminalBuilder;
-import main.java.com.company.TerminalTab;
-import main.java.com.company.config.TerminalConfig;
+import com.company.TerminalBuilder;
+import com.company.TerminalTab;
+import com.company.config.TerminalConfig;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TabPane;
 import javafx.scene.paint.Color;

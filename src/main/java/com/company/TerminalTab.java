@@ -1,12 +1,12 @@
-package main.java.com.company;
+package com.company;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import main.java.com.company.annotation.WebkitCall;
-import main.java.com.company.config.DefaultTabNameGenerator;
-import main.java.com.company.config.TabNameGenerator;
-import main.java.com.company.config.TerminalConfig;
-import main.java.com.company.helper.IOHelper;
-import main.java.com.company.helper.ThreadHelper;
+import com.company.annotation.WebkitCall;
+import com.company.config.DefaultTabNameGenerator;
+import com.company.config.TabNameGenerator;
+import com.company.config.TerminalConfig;
+import com.company.helper.IOHelper;
+import com.company.helper.ThreadHelper;
 import com.pty4j.PtyProcess;
 import com.pty4j.WinSize;
 import com.sun.jna.Platform;

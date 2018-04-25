@@ -1,10 +1,10 @@
-package main.java.com.company.config;
+package com.company.config;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import main.java.com.company.helper.FxHelper;
+import com.company.helper.FxHelper;
 import javafx.scene.paint.Color;
 
 /**
