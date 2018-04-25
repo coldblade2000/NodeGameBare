@@ -43,7 +43,11 @@ public class OutputController {
 
     @FXML
     public void initialize(){
-        tvSequence.setTooltip(new Tooltip("\nPlease enter the characters in order without\nany spaces or quotes. (e.g.: 87g4fw)"));
+        //tvSequence.setTooltip(new Tooltip("\nPlease enter the characters in order without\nany spaces or quotes. (e.g.: 87g4fw)"));
+        Tooltip.install(
+                info,
+                new Tooltip("\nPlease enter the characters in order without\nany spaces or quotes. (e.g.: 87g4fw)")
+        );
         TerminalConfig defaultConfig = new TerminalConfig();
 
         codeArea = new CodeArea();
@@ -96,9 +100,15 @@ public class OutputController {
         /*terminal.onTerminalFxReady(() -> {
             terminal.command("javac output.java");
         });*/
+        ProcessBuilder builder;
+        if(System.getProperty("os.name").contains("windows")){
+             builder = new ProcessBuilder(
+                    "cmd.exe", "/c", "javac Output.java");
+        }else{
+             builder = new ProcessBuilder(
+                    "/bin/bash", "-c", "javac Output.java");
+        }
 
-        ProcessBuilder builder = new ProcessBuilder(
-                "cmd.exe", "/c", "javac Output.java");
         builder.redirectErrorStream(true);
         Process p = builder.start();
         BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));

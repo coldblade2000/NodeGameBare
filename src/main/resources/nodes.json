@@ -6,8 +6,9 @@
     "isExpression": false
   },
   {
-    "beginning": "        System.out.println(\"HelloWorld\");\n",
+    "beginning": "        System.out.println(\"Hello user, this program is used to add together fractions that have the same DENOMINATOR.\");\n",
     "identifier": "1",
     "isExpression": true
   }
+
 ]
