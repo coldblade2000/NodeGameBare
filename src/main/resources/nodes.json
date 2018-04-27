@@ -6,8 +6,49 @@
     "isExpression": false
   },
   {
-    "beginning": "        System.out.println(\"Hello user, this program is used to add together fractions that have the same DENOMINATOR.\");\n",
+    "beginning": "        System.out.println(\"Hello user, this program is used to add together fractions that have the same DENOMINATOR.\");\\n",
     "identifier": "1",
+    "isExpression": true
+  },
+  {
+    "beginning": "import java.util.Scanner;\n public class Output {\n     public static void main(String[] args) {\n         Scanner scan = new Scanner(System.in);\n         int firstN, secondN, thirdN, denominator, sum;\n         \n",
+    "end": "     }\n }\n",
+    "identifier": "q",
+    "isExpression": false
+  },
+  {
+    "beginning": "         System.out.println(\"Hello user, this program is used to add together fractions that have the same DENOMINATOR.\\n \");\n \n",
+    "identifier": "w",
+    "isExpression": true
+  },
+  {
+    "beginning": "         System.out.println(\"Please insert the denominator: \");\n         denominator = scan.nextInt();\n \n",
+    "identifier": "e",
+    "isExpression": true
+  },
+  {
+    "beginning": "         System.out.println(\"Please insert the first nominator: \");\n         firstN = scan.nextInt();\n \n",
+    "identifier": "r",
+    "isExpression": true
+  },
+  {
+    "beginning": "         System.out.println(\"Please insert the second nominator: \");\n         secondN = scan.nextInt();\n \n",
+    "identifier": "t",
+    "isExpression": true
+  },
+  {
+    "beginning": "         System.out.println(\"Please insert the third nominator: \");\n         thirdN = scan.nextInt();\n \n",
+    "identifier": "y",
+    "isExpression": true
+  },
+  {
+    "beginning": "         sum = firstN+secondN+thirdN;\n \n",
+    "identifier": "u",
+    "isExpression": true
+  },
+  {
+    "beginning": "         System.out.println(\"The answer is: \\n \\n \"+sum+\" \\n-----\\n \"+denominator+\"\\n\\n\");\n",
+    "identifier": "i",
     "isExpression": true
   }
 

@@ -101,7 +101,8 @@ public class OutputController {
             terminal.command("javac output.java");
         });*/
         ProcessBuilder builder;
-        if(System.getProperty("os.name").contains("windows")){
+        System.out.println(System.getProperty("os.name"));
+        if(System.getProperty("os.name").contains("Windows")){
              builder = new ProcessBuilder(
                     "cmd.exe", "/c", "javac Output.java");
         }else{
