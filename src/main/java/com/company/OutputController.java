@@ -33,19 +33,17 @@ public class OutputController {
 
     public TabPane tabPane;
     public HBox Toolbar;
-    public ImageView info;
     public Button bSequence, bRun;
     public TextArea tvSequence;
     public AnchorPane anchorText;
-    Tooltip tooltip = new Tooltip();
-    CodeArea codeArea;
-    TerminalTab terminal;
+    private CodeArea codeArea;
+    private TerminalTab terminal;
 
     @FXML
     public void initialize(){
         //tvSequence.setTooltip(new Tooltip("\nPlease enter the characters in order without\nany spaces or quotes. (e.g.: 87g4fw)"));
         Tooltip.install(
-                info,
+                tvSequence,
                 new Tooltip("\nPlease enter the characters in order without\nany spaces or quotes. (e.g.: 87g4fw)")
         );
         TerminalConfig defaultConfig = new TerminalConfig();
@@ -84,15 +82,11 @@ public class OutputController {
     public void setSequence(MouseEvent mouseEvent) {
         String result = SequenceProcesser.process(tvSequence.getText());
         System.out.println(result);
-        tvSequence.clear();
+        //tvSequence.clear();
         codeArea.replaceText(result);
     }
 
-    public void showTooltip(MouseEvent mouseEvent) {
-
-    }
-
-    public void runCode(MouseEvent mouseEvent) throws IOException, AWTException, InterruptedException {
+    public void runCode(MouseEvent mouseEvent) throws IOException, AWTException {
         PrintStream stream = new PrintStream("Output.java");
         File file = new File("Output.java");
         System.out.println(file.getAbsolutePath());
@@ -120,10 +114,7 @@ public class OutputController {
             System.out.println(line);
         }
 
-
-        terminal.onTerminalFxReady(() -> {
-            terminal.command("java Output");
-        });
+        terminal.onTerminalFxReady(() -> terminal.command("java Output"));
         new Robot().keyPress(KeyEvent.VK_ENTER);
         //new Robot().keyPress(KeyEvent.VK_ENTER);
 
@@ -132,7 +123,6 @@ public class OutputController {
         });
         new Robot().keyPress(KeyEvent.VK_ENTER);*/
     }
-
 
     private static final String[] KEYWORDS = new String[] {
             "abstract", "assert", "boolean", "break", "byte",

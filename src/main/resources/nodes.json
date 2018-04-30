@@ -1,54 +1,86 @@
 [
   {
-    "beginning": "public class Output{\n    public static void main(String[] args){\n",
-    "end": "    }\n}",
-    "identifier": "a",
-    "isExpression": false
-  },
-  {
-    "beginning": "        System.out.println(\"Hello user, this program is used to add together fractions that have the same DENOMINATOR.\");\\n",
-    "identifier": "1",
-    "isExpression": true
-  },
-  {
     "beginning": "import java.util.Scanner;\n public class Output {\n     public static void main(String[] args) {\n         Scanner scan = new Scanner(System.in);\n         int firstN, secondN, thirdN, denominator, sum;\n         \n",
     "end": "     }\n }\n",
-    "identifier": "q",
+    "identifier": "e",
     "isExpression": false
   },
   {
     "beginning": "         System.out.println(\"Hello user, this program is used to add together fractions that have the same DENOMINATOR.\\n \");\n \n",
-    "identifier": "w",
-    "isExpression": true
-  },
-  {
-    "beginning": "         System.out.println(\"Please insert the denominator: \");\n         denominator = scan.nextInt();\n \n",
-    "identifier": "e",
-    "isExpression": true
-  },
-  {
-    "beginning": "         System.out.println(\"Please insert the first nominator: \");\n         firstN = scan.nextInt();\n \n",
-    "identifier": "r",
-    "isExpression": true
-  },
-  {
-    "beginning": "         System.out.println(\"Please insert the second nominator: \");\n         secondN = scan.nextInt();\n \n",
-    "identifier": "t",
-    "isExpression": true
-  },
-  {
-    "beginning": "         System.out.println(\"Please insert the third nominator: \");\n         thirdN = scan.nextInt();\n \n",
-    "identifier": "y",
-    "isExpression": true
-  },
-  {
-    "beginning": "         sum = firstN+secondN+thirdN;\n \n",
     "identifier": "u",
     "isExpression": true
   },
   {
-    "beginning": "         System.out.println(\"The answer is: \\n \\n \"+sum+\" \\n-----\\n \"+denominator+\"\\n\\n\");\n",
+    "beginning": "         System.out.println(\"Please insert the denominator: \");\n         denominator = scan.nextInt();\n \n",
+    "identifier": "q",
+    "isExpression": true
+  },
+  {
+    "beginning": "         System.out.println(\"Please insert the first nominator: \");\n         firstN = scan.nextInt();\n \n",
+    "identifier": "w",
+    "isExpression": true
+  },
+  {
+    "beginning": "         System.out.println(\"Please insert the second nominator: \");\n         secondN = scan.nextInt();\n \n",
+    "identifier": "y",
+    "isExpression": true
+  },
+  {
+    "beginning": "         System.out.println(\"Please insert the third nominator: \");\n         thirdN = scan.nextInt();\n \n",
     "identifier": "i",
+    "isExpression": true
+  },
+  {
+    "beginning": "         sum = firstN+secondN+thirdN;\n \n",
+    "identifier": "p",
+    "isExpression": true
+  },
+  {
+    "beginning": "         System.out.println(\"The answer is: \\n \\n \"+sum+\" \\n-----\\n \"+denominator+\"\\n\\n\");\n",
+    "identifier": "o",
+    "isExpression": true
+  },
+
+
+  {
+    "beginning": "// Set Up the program\n import java.util.Scanner;\n public class Output {\n     public static void main(String[] args) {\n         try {\n             double firstT, secondT, thirdT;\n             String secondS;\n             int xIndex, equalIndex;\n             Scanner scan = new Scanner(System.in);\n             boolean bContinue = true;\n             System.out.println(\"Hello, welcome to the linear algebra processing program!\\n \");\n             while (bContinue) {\n                 bContinue = false;\n",
+    "end": "             }\n         }catch (Exception e){\n             System.out.println(\"!!! Whoops, there's been some sort of issue with your input. The program will close, but you can just run it again. !!!\");\n             System.exit(0);\n         }\n     }\n }\n",
+    "identifier": "6",
+    "isExpression": false
+  },
+  {
+    "beginning": "                 // Get the equation from the user\n                 System.out.println(\"Please input the question, or write 'quit' to exit: \");\n                 String question = scan.nextLine().toLowerCase().trim().replace(\" \", \"\");\n                 if (question.contains(\"quit\")) {\n                     bContinue = false;\n                     System.exit(0);\n                 }\n                 xIndex = question.indexOf(\"x\");\n                 equalIndex = question.indexOf(\"=\");\n",
+    "identifier": "g",
+    "isExpression": true
+  },
+  {
+    "beginning": "                 // Analyze the question to get the first, second and third terms.\n                 firstT = Integer.valueOf(question.substring(0, xIndex));\n                 secondT = Integer.valueOf(question.substring(xIndex + 1, equalIndex));\n                 thirdT = Integer.valueOf(question.substring(equalIndex + 1));\n                 System.out.println(\"The first term is: \"+firstT+\"x\");\n                 System.out.println(\"The second term is: \"+secondT);\n                 System.out.println(\"The third term is: \"+thirdT+\"\\n\");\n                 if (secondT > 0) {\n                     secondS = \"+ \";\n                 } else {\n                     secondS = \"- \";\n                 }\n",
+    "identifier": "b",
+    "isExpression": true
+  },
+  {
+    "beginning": "                 // Subtract the second term from the third term.\n                 thirdT = thirdT - secondT;\n                 System.out.println(\"Subtracted the second term from both sides. Now the equation is: \" + ((int) firstT) + \"x\" + \" = \" + (int) thirdT);\n",
+    "identifier": "4",
+    "isExpression": true
+  },
+  {
+    "beginning": "                 // Divide the third term by the coefficient of x.\n                 thirdT = thirdT / firstT;\n                 System.out.println(\"Divide the third term by the coefficient of x. Now the equation is: \" + \"x\" + \" = \" + (int) thirdT);\n",
+    "identifier": "l",
+    "isExpression": true
+  },
+  {
+    "beginning": "                 // Repeat the original question to the user\n                 System.out.println(\" \\n \\nThe question was: \" + ((int) firstT) + \"x \" + secondS + (int) Math.abs(secondT) + \" = \" + (int) thirdT);\n",
+    "identifier": "h",
+    "isExpression": true
+  },
+  {
+    "beginning": "                 // Tell the answer to the equation\n                 System.out.println(\" \\n \\nThe answer to the question is: x = \" + thirdT);\n",
+    "identifier": "2",
+    "isExpression": true
+  },
+  {
+    "beginning": "                 // Repeat the program\n                 bContinue=true;\n                 System.out.println(\"====================================================\\n \\n \");\n \n",
+    "identifier": "x",
     "isExpression": true
   }
 

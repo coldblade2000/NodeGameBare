@@ -1,7 +1,7 @@
+package com.company.NODES;
+
 import java.util.Scanner;
-
-public class Main {
-
+public class lineareq {
     public static void main(String[] args) {
         double firstT, secondT, thirdT;
         double answer;
